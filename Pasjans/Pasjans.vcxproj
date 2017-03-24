@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClCompile Include="ElStosu.cpp" />
     <ClCompile Include="Karta.cpp" />
+    <ClCompile Include="ScoreHan.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stos.cpp" />
   </ItemGroup>
@@ -119,6 +120,7 @@
     <ClInclude Include="Coords.h" />
     <ClInclude Include="ElStosu.h" />
     <ClInclude Include="Karta.h" />
+    <ClInclude Include="ScoreHan.h" />
     <ClInclude Include="Stos.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

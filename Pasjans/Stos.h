@@ -17,7 +17,7 @@ public:
 	void wyswietlKolumna(int w,int k, bool a);
 	void wyswietl();
 	void wyswietlWierzcholek();
-	void czysc();
+    void czysc();
 	void odwrocKarty();
 	
 };

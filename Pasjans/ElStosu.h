@@ -1,4 +1,6 @@
 #pragma once
+#include "Karta.h"
+
 class ElStosu
 {
 public:
