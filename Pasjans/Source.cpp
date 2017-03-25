@@ -208,7 +208,7 @@ void gameover() {
 	cout << "Podaj imie: ";
 	cin >> nazwa;
 	scoreHan.wpiszWynik(nazwa);
-	cout << "Nacisnij, aby wróciæ do menu...";
+	cout << "Nacisnij, aby wrï¿½ciï¿½ do menu...";
 	system("pause> nul");
 	menu();
 }
@@ -220,15 +220,15 @@ void menu() {
 	cout << "########################################" << endl;
 	cout << "              PASJANS GOLF" << endl;
 	cout << "########################################" << endl;
-	cout << "1. Rozpocznij grê" << endl;
+	cout << "1. Rozpocznij grï¿½" << endl;
 	cout << "2. Zasady gry i sterowanie" << endl;
-	cout << "3. Wl¹cz dzwieki";
+	cout << "3. Wlï¿½cz dzwieki";
 	if (b) SetConsoleTextAttribute(con, 44); else
 		SetConsoleTextAttribute(con, 66);
 	cout << "  " << endl;
 	SetConsoleTextAttribute(con, 15);
 	cout << "4. Highscores" << endl;
-	cout << "5. Wyjœcie" << endl;
+	cout << "5. Wyjï¿½cie" << endl;
 	cout << "Wybor: ";
 	cin >> w;
 	switch (w) {
@@ -236,13 +236,13 @@ void menu() {
 		break;
 	case '2': {
 		system("cls");
-		cout << "Prostota zasad gry w pasjansa czasami jest wrêcz pora¿aj¹ca i g³ównie ta cecha powoduje, ¿e z przyjemnoœci¹ poœwiêcamy czas, aby roz³o¿yæ w spokoju karty i zagraæ. Pasjans golf ma dwie pule kart: roz³o¿on¹, odkryt¹ na stole oraz zakryt¹ w kupce pod spodem. Pierwsza karta z kupki jest automatycznie odkrywana przy rozpoczêciu gry i le¿y obok kupki. Gracz ma za zadanie dobraæ do niej kolejne karty z tych roz³o¿onych (o jedno „oczko” mniejsz¹ lub wiêksz¹, kolor nie ma znaczenia), a jeœli skoñcz¹ siê wszystkie mo¿liwoœci, musi zabraæ kolejn¹ kartê z zakrytej kupki. Gra trwa a¿ do wyczerpania kart na kupce. Jeœli w tym czasie znikn¹ wszystkie roz³o¿one na stole katry – wygra³eœ, jeœli pozostanie choæby jedna – có¿, trudno, mo¿e nastêpnym razem siê uda... ";
+		cout << "Prostota zasad gry w pasjansa czasami jest wrï¿½cz poraï¿½ajï¿½ca i gï¿½ï¿½wnie ta cecha powoduje, ï¿½e z przyjemnoï¿½ciï¿½ poï¿½wiï¿½camy czas, aby rozï¿½oï¿½yï¿½ w spokoju karty i zagraï¿½. Pasjans golf ma dwie pule kart: rozï¿½oï¿½onï¿½, odkrytï¿½ na stole oraz zakrytï¿½ w kupce pod spodem. Pierwsza karta z kupki jest automatycznie odkrywana przy rozpoczï¿½ciu gry i leï¿½y obok kupki. Gracz ma za zadanie dobraï¿½ do niej kolejne karty z tych rozï¿½oï¿½onych (o jedno ï¿½oczkoï¿½ mniejszï¿½ lub wiï¿½kszï¿½, kolor nie ma znaczenia), a jeï¿½li skoï¿½czï¿½ siï¿½ wszystkie moï¿½liwoï¿½ci, musi zabraï¿½ kolejnï¿½ kartï¿½ z zakrytej kupki. Gra trwa aï¿½ do wyczerpania kart na kupce. Jeï¿½li w tym czasie zniknï¿½ wszystkie rozï¿½oï¿½one na stole katry ï¿½ wygraï¿½eï¿½, jeï¿½li pozostanie choï¿½by jedna ï¿½ cï¿½ï¿½, trudno, moï¿½e nastï¿½pnym razem siï¿½ uda... ";
 		cout << endl << "Sterowanie:";
-		cout << endl << "\t\tA - przesuñ kursor w lewo";
-		cout << endl << "\t\tD - przesuñ kursor w prawo";
-		cout << endl << "\t\tS - sci¹gnij karte ze sto³u (jeœli to mo¿liwe)";
-		cout << endl << "\t\tSpacja - wyló¿ now¹ kartê";
-		cout << endl << "\t\tQ - wyjdŸ do menu";
+		cout << endl << "\t\tA - przesuï¿½ kursor w lewo";
+		cout << endl << "\t\tD - przesuï¿½ kursor w prawo";
+		cout << endl << "\t\tS - sciï¿½gnij karte ze stoï¿½u (jeï¿½li to moï¿½liwe)";
+		cout << endl << "\t\tSpacja - wylï¿½ï¿½ nowï¿½ kartï¿½";
+		cout << endl << "\t\tQ - wyjdï¿½ do menu";
 		cout << endl << "Nacisnij, aby wrocic do menu...";
 		system("pause > nul");
 		menu();
@@ -256,7 +256,7 @@ void menu() {
 	}
 	case '4': {
 		scoreHan.wypiszWyniki();
-		cout << "Nacisnij, aby wrócic do menu...";
+		cout << "Nacisnij, aby wrï¿½cic do menu...";
 		system("pause > nul");
 		menu();
 		break;
