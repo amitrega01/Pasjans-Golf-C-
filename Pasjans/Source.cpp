@@ -1,4 +1,4 @@
-#include <cstdlib>
+﻿#include <cstdlib>
 #include <iostream>
 #include <iomanip>
 #include <Windows.h>
@@ -16,7 +16,7 @@ HANDLE con = GetStdHandle(STD_OUTPUT_HANDLE);
 const int rozmiarTalii = 52;
 const int kartyGracza = 12;
 const int kartyStol = rozmiarTalii - kartyGracza;
-bool b = false;
+bool b = false; //wlacza dzwieki
 int aktywnaKolumna;
 
 Karta* karta[rozmiarTalii];
@@ -126,13 +126,10 @@ void create() {
 	aktywnaKolumna = 0;
 	//generowanie talii
 	for (int i = 0; i < rozmiarTalii; i++) {
-		//talia.push(new Karta(i%4+1,i,false));
 		karta[i] = new Karta(i % 4 + 1, i % 13 + 1, false);
-		//talia.push(new Karta(i % 4 + 1, i % 13 + 1, false));
 	}
 	random_shuffle(&karta[0], &karta[rozmiarTalii]);
 	for (int i = 0; i < rozmiarTalii; i++) {
-		//talia.push(new Karta(i%4+1,i,false));
 		talia.push(karta[i]);
 	}
 	//wykladanie kart graczowi
@@ -203,12 +200,11 @@ void gameover() {
 			Beep(500, 300);
 			Beep(550, 1090);
 		}
-
 	char nazwa[25];
 	cout << "Podaj imie: ";
 	cin >> nazwa;
 	scoreHan.wpiszWynik(nazwa);
-	cout << "Nacisnij, aby wr�ci� do menu...";
+	cout << "Nacisnij, aby wrócić do menu...";
 	system("pause> nul");
 	menu();
 }
@@ -220,15 +216,15 @@ void menu() {
 	cout << "########################################" << endl;
 	cout << "              PASJANS GOLF" << endl;
 	cout << "########################################" << endl;
-	cout << "1. Rozpocznij gr�" << endl;
+	cout << "1. Rozpocznij grę" << endl;
 	cout << "2. Zasady gry i sterowanie" << endl;
-	cout << "3. Wl�cz dzwieki";
+	cout << "3. Wlącz dzwieki";
 	if (b) SetConsoleTextAttribute(con, 44); else
 		SetConsoleTextAttribute(con, 66);
 	cout << "  " << endl;
 	SetConsoleTextAttribute(con, 15);
 	cout << "4. Highscores" << endl;
-	cout << "5. Wyj�cie" << endl;
+	cout << "5. Wyjście" << endl;
 	cout << "Wybor: ";
 	cin >> w;
 	switch (w) {
@@ -236,19 +232,20 @@ void menu() {
 		break;
 	case '2': {
 		system("cls");
-		cout << "Prostota zasad gry w pasjansa czasami jest wr�cz pora�aj�ca i g��wnie ta cecha powoduje, �e z przyjemno�ci� po�wi�camy czas, aby roz�o�y� w spokoju karty i zagra�. Pasjans golf ma dwie pule kart: roz�o�on�, odkryt� na stole oraz zakryt� w kupce pod spodem. Pierwsza karta z kupki jest automatycznie odkrywana przy rozpocz�ciu gry i le�y obok kupki. Gracz ma za zadanie dobra� do niej kolejne karty z tych roz�o�onych (o jedno �oczko� mniejsz� lub wi�ksz�, kolor nie ma znaczenia), a je�li sko�cz� si� wszystkie mo�liwo�ci, musi zabra� kolejn� kart� z zakrytej kupki. Gra trwa a� do wyczerpania kart na kupce. Je�li w tym czasie znikn� wszystkie roz�o�one na stole katry � wygra�e�, je�li pozostanie cho�by jedna � c��, trudno, mo�e nast�pnym razem si� uda... ";
+		cout << "Prostota zasad gry w pasjansa czasami jest wręcz porażająca i głównie ta cecha powoduje, że z przyjemnością poświęcamy czas, aby rozłożyć w spokoju karty i zagrać. Pasjans golf ma dwie pule kart: rozłożoną, odkrytą na stole oraz zakrytą w kupce pod spodem. Pierwsza karta z kupki jest automatycznie odkrywana przy rozpoczęciu gry i leży obok kupki. Gracz ma za zadanie dobrać do niej kolejne karty z tych rozłożonych (o jedno „oczko” mniejszą lub większą, kolor nie ma znaczenia), a jeśli skończą się wszystkie możliwości, musi zabrać kolejną kartę z zakrytej kupki. Gra trwa aż do wyczerpania kart na kupce. Jeśli w tym czasie znikną wszystkie rozłożone na stole katry – wygrałeś, jeśli pozostanie choćby jedna – cóż, trudno, może następnym razem się uda... ";
 		cout << endl << "Sterowanie:";
-		cout << endl << "\t\tA - przesu� kursor w lewo";
-		cout << endl << "\t\tD - przesu� kursor w prawo";
-		cout << endl << "\t\tS - sci�gnij karte ze sto�u (je�li to mo�liwe)";
-		cout << endl << "\t\tSpacja - wyl�� now� kart�";
-		cout << endl << "\t\tQ - wyjd� do menu";
+		cout << endl << "\t\tA - przesuń kursor w lewo";
+		cout << endl << "\t\tD - przesuń kursor w prawo";
+		cout << endl << "\t\tS - sciągnij karte ze stołu (jeśli to możliwe)";
+		cout << endl << "\t\tSpacja - wylóż nową kartę";
+		cout << endl << "\t\tQ - wyjdź do menu";
+		cout << endl << endl << "ATH Bielsko-Biała @ Adam Mitręga, Maciej Ślusarek";
 		cout << endl << "Nacisnij, aby wrocic do menu...";
 		system("pause > nul");
 		menu();
 		break;
 	}
-	case '3':{
+	case '3': {
 		b = !b;
 		if (b) Beep(500, 300);
 		menu();
@@ -256,7 +253,7 @@ void menu() {
 	}
 	case '4': {
 		scoreHan.wypiszWyniki();
-		cout << "Nacisnij, aby wr�cic do menu...";
+		cout << "Nacisnij, aby wrócic do menu...";
 		system("pause > nul");
 		menu();
 		break;
@@ -271,7 +268,6 @@ void menu() {
 }
 
 int main() {
-
 	SetConsoleTextAttribute(con, 15);
 	system("chcp 1250 > nul");
 	menu();

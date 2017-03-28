@@ -4,21 +4,21 @@
 class Stos
 {
 private:
-	
 
-public:	
+
+public:
 	Stos();
-	~Stos();	
+	~Stos();
 	ElStosu* wierzcholek;
 	void push(Karta *karta);
 	ElStosu* pop();
 	int getValue();
 	int policz();
-	void wyswietlKolumna(int w,int k, bool a);
+	void wyswietlKolumna(int w, int k, bool a);
 	void wyswietl();
 	void wyswietlWierzcholek();
-    void czysc();
+	void czysc();
 	void odwrocKarty();
-	
+
 };
 

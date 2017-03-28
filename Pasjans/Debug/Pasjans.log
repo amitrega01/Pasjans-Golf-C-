@@ -1,6 +1,4 @@
-﻿  Source.cpp
-c:\users\amitr\desktop\c++\pasjans\pasjans\source.cpp(124): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  ScoreHan.cpp
-  Generating Code...
+﻿  Stos.cpp
+c:\users\amitr\desktop\c++\pasjans\pasjans\coords.h(8): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
   Pasjans.vcxproj -> C:\Users\amitr\Desktop\c++\Pasjans\Debug\Pasjans.exe
   Pasjans.vcxproj -> C:\Users\amitr\Desktop\c++\Pasjans\Debug\Pasjans.pdb (Partial PDB)

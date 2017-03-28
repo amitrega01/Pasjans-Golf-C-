@@ -5,7 +5,7 @@ public:
 	Karta(int k, int f, bool z);
 	~Karta();
 	int kolor, figura;
-	bool zakryta;	
+	bool zakryta;
 	void wyswietlKarte();
 };
 

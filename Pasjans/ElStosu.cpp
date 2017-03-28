@@ -6,7 +6,7 @@ ElStosu::ElStosu(Karta* inKarta) {
 	karta = inKarta;
 }
 void ElStosu::dodaj(int k, int f, bool z) {
-	karta = new Karta(k,f,z);
+	karta = new Karta(k, f, z);
 }
 
 
