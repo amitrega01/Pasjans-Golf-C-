@@ -1,3 +1,7 @@
+/*
+Created by Adam Mitrêga @ date
+*/
+
 #include "Karta.h"
 #include "ElStosu.h"
 
@@ -9,11 +13,9 @@ void ElStosu::dodaj(int k, int f, bool z) {
 	karta = new Karta(k, f, z);
 }
 
-
 void ElStosu::wyswietl() {
 	karta->wyswietlKarte();
 }
-
 
 void ElStosu::zmienNast(ElStosu *in) {
 	next = in;
@@ -22,7 +24,6 @@ void ElStosu::zmienNast(ElStosu *in) {
 ElStosu* ElStosu::pobierzNast() {
 	return next;
 }
-
 
 ElStosu::~ElStosu() {
 	delete karta;

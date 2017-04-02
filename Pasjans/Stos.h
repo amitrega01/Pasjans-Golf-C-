@@ -1,3 +1,7 @@
+/*
+Created by Adam Mitrêga @ date
+*/
+
 #pragma once
 
 #include "ElStosu.h"

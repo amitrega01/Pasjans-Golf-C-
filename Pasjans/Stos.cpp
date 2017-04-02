@@ -1,3 +1,6 @@
+/*
+Created by Adam Mitrêga @ date
+*/
 #include "Karta.h"
 #include "Stos.h"
 #include "Coords.h"
@@ -6,7 +9,7 @@ Stos::Stos() {
 	wierzcholek = nullptr;
 }
 
-void Stos::push(Karta* karta) {
+void Stos::push(Karta* karta) { //dodaje element na stos
 	ElStosu *bufor;
 	bufor = new ElStosu(karta);
 	bufor->zmienNast(wierzcholek);
@@ -14,7 +17,7 @@ void Stos::push(Karta* karta) {
 	bufor = nullptr;
 }
 
-void Stos::wyswietlKolumna(int w, int k, bool a) {
+void Stos::wyswietlKolumna(int w, int k, bool a) { //wyswietla elementy stosu od dolu do gory
 	w += 3;
 	ElStosu *bufor = wierzcholek;
 	if (bufor != nullptr) {
@@ -41,7 +44,7 @@ void Stos::wyswietlKolumna(int w, int k, bool a) {
 	}
 }
 
-void Stos::wyswietl() {
+void Stos::wyswietl() { //wyswielta elementy stsu od lewej do prawej
 	ElStosu *bufor = wierzcholek;
 	while (bufor != nullptr) {
 		bufor->wyswietl();
@@ -49,7 +52,7 @@ void Stos::wyswietl() {
 	}
 }
 
-ElStosu* Stos::pop() {
+ElStosu* Stos::pop() { //usuwa element ze stosu i zwraca go 
 	ElStosu *bufor = wierzcholek;
 	if (wierzcholek != nullptr)
 	{
@@ -59,11 +62,12 @@ ElStosu* Stos::pop() {
 	return bufor;
 }
 
-int Stos::getValue() {
+int Stos::getValue() { //zwraca figure karty na stosie
+
 	return wierzcholek->karta->figura;
 }
 
-int Stos::policz() {
+int Stos::policz() {  //liczy ile jest kart na stosie, przydatne do wyswietlania jako kolumna
 	ElStosu *bufor = wierzcholek;
 	int a = -1;
 	while (bufor != nullptr) {
@@ -82,17 +86,16 @@ void Stos::odwrocKarty() {
 	}
 }
 
-void Stos::wyswietlWierzcholek() {
+void Stos::wyswietlWierzcholek() { //wyswietla karte na wierzcholku stosu
 	wierzcholek->wyswietl();
 }
 
-void Stos::czysc() {
+void Stos::czysc() { //czysci stos
 	ElStosu *bufor;
 	while (wierzcholek != nullptr) {
 		bufor = wierzcholek;
 		wierzcholek = wierzcholek->pobierzNast();
 		delete bufor;
-
 	}
 }
 

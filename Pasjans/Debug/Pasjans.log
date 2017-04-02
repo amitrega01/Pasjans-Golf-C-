@@ -1,4 +1,10 @@
 ﻿  Stos.cpp
-c:\users\amitr\desktop\c++\pasjans\pasjans\coords.h(8): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+c:\users\amitr\desktop\c++\pasjans\pasjans\coords.h(12): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+  Source.cpp
+c:\users\amitr\desktop\c++\pasjans\pasjans\source.cpp(127): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  ScoreHan.cpp
+  Karta.cpp
+  ElStosu.cpp
+  Generating Code...
   Pasjans.vcxproj -> C:\Users\amitr\Desktop\c++\Pasjans\Debug\Pasjans.exe
   Pasjans.vcxproj -> C:\Users\amitr\Desktop\c++\Pasjans\Debug\Pasjans.pdb (Partial PDB)

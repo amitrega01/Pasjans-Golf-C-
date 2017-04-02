@@ -1,3 +1,7 @@
+/*
+Created by Adam Mitrêga @ date
+*/
+
 #pragma once
 class Karta
 {
@@ -8,4 +12,3 @@ public:
 	bool zakryta;
 	void wyswietlKarte();
 };
-

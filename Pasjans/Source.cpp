@@ -1,4 +1,7 @@
-﻿#include <cstdlib>
+﻿/*
+Created by Adam Mitręga @ date
+*/
+#include <cstdlib>
 #include <iostream>
 #include <iomanip>
 #include <Windows.h>
@@ -45,7 +48,7 @@ void checkWin() {
 	if (scoreHan.score == 4400) gameover();
 }
 
-void dispose() {
+void dispose() { //usuwa wszystkie elementy zeby nie powodowalo wyciekow pamieci itp
 	talia.czysc();
 	gracza.czysc();
 	graczaZ.czysc();
@@ -55,7 +58,7 @@ void dispose() {
 	}
 }
 
-void checkInput() {
+void checkInput() { //sprawdza klawisze wprowadzane przez gracza
 	while (1) {
 		if (_kbhit()) {
 			key = _getch();
@@ -88,7 +91,7 @@ void checkInput() {
 				render();
 				break;
 			}
-			case 's': {
+			case 's': { //sprawdza czy kolumna na ktorej jest gracz ma wierzcholek o 1 mniejszy lub wiekszy od karty na kupce gracza
 				if (kol[aktywnaKolumna].wierzcholek != nullptr)
 					if (kol[aktywnaKolumna].getValue() + 1 == gracza.getValue() || kol[aktywnaKolumna].getValue() - 1 == gracza.getValue()) {
 						scoreHan.score += 110; gracza.push(kol[aktywnaKolumna].pop()->karta); if (b)  Beep(800, 200);
@@ -120,34 +123,34 @@ void checkInput() {
 	}
 }
 
-void create() {
+void create() { //funkcja inicjiujaca, inicjuje zmienne, resetuje wyniki, twrzy i tasuje talie
 	srand(time(0));
 	scoreHan.score = 0;
 	aktywnaKolumna = 0;
 	//generowanie talii
 	for (int i = 0; i < rozmiarTalii; i++) {
-		karta[i] = new Karta(i % 4 + 1, i % 13 + 1, false);
+		karta[i] = new Karta(i % 4 + 1, i % 13 + 1, false); //definiowanie nowej karty
 	}
 	random_shuffle(&karta[0], &karta[rozmiarTalii]);
 	for (int i = 0; i < rozmiarTalii; i++) {
-		talia.push(karta[i]);
+		talia.push(karta[i]); // funkcja push dodaje karte na stos, tu z tabeli
 	}
 	//wykladanie kart graczowi
 	for (int i = 0; i < kartyGracza; i++) {
-		graczaZ.push(talia.pop()->karta);
+		graczaZ.push(talia.pop()->karta); //odaje karty z talii do kupki gracza, funkcja pop kasuje karte ze stosu i zwraca ja, dzieki czemu mozna ja przelozyc na inny stos
 	}
-	graczaZ.odwrocKarty();
+	graczaZ.odwrocKarty(); //odwaca kart zeby nie byly widoczne
 	gracza.push(graczaZ.pop()->karta);
 	for (int i = 0; i <= 7; i++) {
 		for (int j = 0; j < 5; j++) {
-			kol[i].push(talia.pop()->karta);
+			kol[i].push(talia.pop()->karta); //wydaje karty na stol do 8 stosow po 5 kart
 		}
-		cout << endl;
+		cout << endl; 
 	}
 	render();
 }
 
-void render() {
+void render() { //funkcja rysujaca, rysuje nowy ekran po wprowadzeniu klawisza
 	system("cls");
 	cout << "########################################" << endl;
 	cout << "              PASJANS GOLF" << endl;
@@ -155,12 +158,12 @@ void render() {
 	for (int i = 0; i <= 7; i++) {
 		int wysokosc = kol[i].policz();
 		if (aktywnaKolumna == i) {
-			kol[i].wyswietlKolumna(wysokosc, i, true);
+			kol[i].wyswietlKolumna(wysokosc, i, true); //wysswietla stos w kolumnie, a nie tak jak zwykle od lewej do prawej
 		} else kol[i].wyswietlKolumna(wysokosc, i, false);
 	}
 
-	gotoXY(0, 9);
-	SetConsoleTextAttribute(con, 420);
+	gotoXY(0, 9); //funkcja przenosi kursor do innego miejsca na ekranie, tam sie potem pisze
+	SetConsoleTextAttribute(con, 420); //zmiena kolor tekstu
 	gracza.wyswietlWierzcholek();
 	SetConsoleTextAttribute(con, 15);
 	graczaZ.wyswietl();
@@ -180,9 +183,9 @@ void gameover() {
 	for (int i = 0; i <= 7; i++) {
 		int wysokosc = kol[i].policz();
 		if (aktywnaKolumna == i) {
-			kol[i].wyswietlKolumna(wysokosc, i, true);
+			kol[i].wyswietlKolumna(wysokosc, i, true); //wypisuje obecny stan kart na stole
 		} else kol[i].wyswietlKolumna(wysokosc, i, false);
-	}
+	} 
 	gotoXY(0, 9);
 	cout << "########################################" << endl;
 	cout << "              KONIEC GRY" << endl;
@@ -203,7 +206,7 @@ void gameover() {
 	char nazwa[25];
 	cout << "Podaj imie: ";
 	cin >> nazwa;
-	scoreHan.wpiszWynik(nazwa);
+	scoreHan.wpiszWynik(nazwa); //zapisuje wynik do pliku
 	cout << "Nacisnij, aby wrócić do menu...";
 	system("pause> nul");
 	menu();
