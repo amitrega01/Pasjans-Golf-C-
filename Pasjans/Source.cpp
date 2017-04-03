@@ -1,6 +1,3 @@
-ï»¿/*
-Created by Adam MitrÄ™ga @ date
-*/
 #include <cstdlib>
 #include <iostream>
 #include <iomanip>
@@ -207,7 +204,7 @@ void gameover() {
 	cout << "Podaj imie: ";
 	cin >> nazwa;
 	scoreHan.wpiszWynik(nazwa); //zapisuje wynik do pliku
-	cout << "Nacisnij, aby wrÃ³ciÄ‡ do menu...";
+	cout << "Nacisnij, aby wróciæ do menu...";
 	system("pause> nul");
 	menu();
 }
@@ -219,15 +216,15 @@ void menu() {
 	cout << "########################################" << endl;
 	cout << "              PASJANS GOLF" << endl;
 	cout << "########################################" << endl;
-	cout << "1. Rozpocznij grÄ™" << endl;
+	cout << "1. Rozpocznij grê" << endl;
 	cout << "2. Zasady gry i sterowanie" << endl;
-	cout << "3. WlÄ…cz dzwieki";
+	cout << "3. Wl¹cz dzwieki";
 	if (b) SetConsoleTextAttribute(con, 44); else
 		SetConsoleTextAttribute(con, 66);
 	cout << "  " << endl;
 	SetConsoleTextAttribute(con, 15);
 	cout << "4. Highscores" << endl;
-	cout << "5. WyjÅ›cie" << endl;
+	cout << "5. Wyjœcie" << endl;
 	cout << "Wybor: ";
 	cin >> w;
 	switch (w) {
@@ -235,14 +232,14 @@ void menu() {
 		break;
 	case '2': {
 		system("cls");
-		cout << "Prostota zasad gry w pasjansa czasami jest wrÄ™cz poraÅ¼ajÄ…ca i gÅ‚Ã³wnie ta cecha powoduje, Å¼e z przyjemnoÅ›ciÄ… poÅ›wiÄ™camy czas, aby rozÅ‚oÅ¼yÄ‡ w spokoju karty i zagraÄ‡. Pasjans golf ma dwie pule kart: rozÅ‚oÅ¼onÄ…, odkrytÄ… na stole oraz zakrytÄ… w kupce pod spodem. Pierwsza karta z kupki jest automatycznie odkrywana przy rozpoczÄ™ciu gry i leÅ¼y obok kupki. Gracz ma za zadanie dobraÄ‡ do niej kolejne karty z tych rozÅ‚oÅ¼onych (o jedno â€žoczkoâ€ mniejszÄ… lub wiÄ™kszÄ…, kolor nie ma znaczenia), a jeÅ›li skoÅ„czÄ… siÄ™ wszystkie moÅ¼liwoÅ›ci, musi zabraÄ‡ kolejnÄ… kartÄ™ z zakrytej kupki. Gra trwa aÅ¼ do wyczerpania kart na kupce. JeÅ›li w tym czasie zniknÄ… wszystkie rozÅ‚oÅ¼one na stole katry â€“ wygraÅ‚eÅ›, jeÅ›li pozostanie choÄ‡by jedna â€“ cÃ³Å¼, trudno, moÅ¼e nastÄ™pnym razem siÄ™ uda... ";
+		cout << "Prostota zasad gry w pasjansa czasami jest wrêcz pora¿aj¹ca i g³ównie ta cecha powoduje, ¿e z przyjemnoœci¹ poœwiêcamy czas, aby roz³o¿yæ w spokoju karty i zagraæ. Pasjans golf ma dwie pule kart: roz³o¿on¹, odkryt¹ na stole oraz zakryt¹ w kupce pod spodem. Pierwsza karta z kupki jest automatycznie odkrywana przy rozpoczêciu gry i le¿y obok kupki. Gracz ma za zadanie dobraæ do niej kolejne karty z tych roz³o¿onych (o jedno „oczko” mniejsz¹ lub wiêksz¹, kolor nie ma znaczenia), a jeœli skoñcz¹ siê wszystkie mo¿liwoœci, musi zabraæ kolejn¹ kartê z zakrytej kupki. Gra trwa a¿ do wyczerpania kart na kupce. Jeœli w tym czasie znikn¹ wszystkie roz³o¿one na stole katry – wygra³eœ, jeœli pozostanie choæby jedna – có¿, trudno, mo¿e nastêpnym razem siê uda... ";
 		cout << endl << "Sterowanie:";
-		cout << endl << "\t\tA - przesuÅ„ kursor w lewo";
-		cout << endl << "\t\tD - przesuÅ„ kursor w prawo";
-		cout << endl << "\t\tS - sciÄ…gnij karte ze stoÅ‚u (jeÅ›li to moÅ¼liwe)";
-		cout << endl << "\t\tSpacja - wylÃ³Å¼ nowÄ… kartÄ™";
-		cout << endl << "\t\tQ - wyjdÅº do menu";
-		cout << endl << endl << "ATH Bielsko-BiaÅ‚a @ Adam MitrÄ™ga, Maciej Åšlusarek";
+		cout << endl << "\t\tA - przesuñ kursor w lewo";
+		cout << endl << "\t\tD - przesuñ kursor w prawo";
+		cout << endl << "\t\tS - sci¹gnij karte ze sto³u (jeœli to mo¿liwe)";
+		cout << endl << "\t\tSpacja - wyló¿ now¹ kartê";
+		cout << endl << "\t\tQ - wyjdŸ do menu";
+		cout << endl << endl << "ATH Bielsko-Bia³a @ Adam Mitrêga, Maciej Œlusarek";
 		cout << endl << "Nacisnij, aby wrocic do menu...";
 		system("pause > nul");
 		menu();
@@ -256,7 +253,7 @@ void menu() {
 	}
 	case '4': {
 		scoreHan.wypiszWyniki();
-		cout << "Nacisnij, aby wrÃ³cic do menu...";
+		cout << "Nacisnij, aby wrócic do menu...";
 		system("pause > nul");
 		menu();
 		break;

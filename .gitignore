@@ -27,3 +27,5 @@
 *.exe
 *.out
 *.app
+/.vs/Pasjans/v15/Browse.VC.opendb
+*.opendb

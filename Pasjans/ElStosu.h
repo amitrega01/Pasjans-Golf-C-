@@ -1,7 +1,3 @@
-/*
-Created by Adam Mitrêga @ date
-*/
-
 #pragma once
 #include "Karta.h"
 
