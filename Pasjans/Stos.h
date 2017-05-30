@@ -1,12 +1,9 @@
-
-
 #pragma once
 
 #include "ElStosu.h"
 class Stos
 {
 private:
-
 
 public:
 	Stos();
@@ -21,6 +18,4 @@ public:
 	void wyswietlWierzcholek();
 	void czysc();
 	void odwrocKarty();
-
 };
-
